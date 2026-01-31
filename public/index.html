@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twenty20 Systems - Portfolio Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-animation">
+  <span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span>
+</div>
+
+<div class="container">
+  <div class="card">
+    <div class="logo">
+      <h1>Twenty20 Systems</h1>
+    </div>
+    <p class="subtitle">Login or register to view your portfolio</p>
+
+    <div class="tabs">
+      <div class="tab-slider" id="tabSlider"></div>
+      <div class="tab active" onclick="switchTab('login')">Login</div>
+      <div class="tab" onclick="switchTab('register')">Register</div>
+    </div>
+
+    <div class="form-container">
+      <div class="form-wrapper" id="formWrapper">
+
+        <div class="form" id="loginForm">
+          <div class="input-group">
+            <label>Email</label>
+            <div class="input-wrapper">
+              <input type="email" id="loginEmail">
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>Password</label>
+            <div class="input-wrapper">
+              <input type="password" id="loginPassword">
+              <span class="toggle-password" onclick="togglePassword('loginPassword')">Show Password</span>
+            </div>
+          </div>
+
+          <button onclick="login()" id="loginBtn">
+            <span class="btn-text">Login to Portfolio</span>
+            <div class="spinner"></div>
+          </button>
+        </div>
+
+        <div class="form hidden" id="registerForm">
+          <div class="input-group">
+            <label>Email</label>
+            <input type="email" id="regEmail">
+          </div>
+
+          <div class="input-group">
+            <label>Password</label>
+            <input type="password" id="regPassword">
+          </div>
+
+          <div class="input-group">
+            <label>Confirm Password</label>
+            <input type="password" id="regConfirmPassword">
+          </div>
+
+          <button onclick="register()" id="registerBtn">
+            <span class="btn-text">Create Account</span>
+            <div class="spinner"></div>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <p id="message" class="message"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

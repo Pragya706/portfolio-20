@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(135deg, #FAD0C9, #D5AAFF);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-password {
+  cursor: pointer;
+}
+
+.bg-animation span {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  animation: float 25s infinite;
+}
+
+@keyframes float {
+  from { transform: translateY(100vh); }
+  to { transform: translateY(-100vh); }
+}
+
+.container {
+  width: 100%;
+  max-width: 450px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(213, 170, 255, 0.35);
+}
+
+.logo h1 {
+  text-align: center;
+  font-size: 32px;
+  background: linear-gradient(135deg, #FFABAB, #D5AAFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  text-align: center;
+  margin: 15px 0;
+  color: #6b6b6b;
+}
+
+.tabs {
+  display: flex;
+  background: #FAD6A5;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  color: #444;
+  font-weight: 600;
+}
+
+.tab.active {
+  background: linear-gradient(135deg, #FFABAB, #FFC3A0);
+  color: #2b2b2b;
+  border-radius: 30px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #FFABAB;
+  outline: none;
+}
+
+input:focus {
+  border-color: #D5AAFF;
+  box-shadow: 0 0 0 3px rgba(213, 170, 255, 0.3);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #FFABAB, #D5AAFF);
+  color: #2b2b2b;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(213, 170, 255, 0.4);
+}
+
+.hidden {
+  display: none;
+}
+
+.message {
+  margin-top: 15px;
+  text-align: center;
+  color: #FFABAB;
+  font-weight: 600;
+}
